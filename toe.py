@@ -28,7 +28,7 @@ class toe:
         user_col = int(input('Pick a column: '))
         if user_col % 2 != 0:
             raise ValueError('cant pick odd numbers')
-        if (user_row < 0 or user_row > len(board) - 1) or (user_col < 3 or user_col > len(board[0]) - 1):
+        if (user_row < 0 or user_row > len(board) - 1) or (user_col < 0 or user_col > len(board[0]) - 1):
             print('not even on the board. turn skipped')
         elif board[user_row][user_col] == 'X' or board[user_row][user_col] == '0':
             print('User: spot already taken, turn skipped')
